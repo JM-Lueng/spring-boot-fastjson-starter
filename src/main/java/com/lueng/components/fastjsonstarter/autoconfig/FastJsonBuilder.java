@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * fastjson相关的配置
  * @author JMLiang
- * @since 2018-03-11
+ * @since 2018-04-15
  */
 public final class FastJsonBuilder {
 

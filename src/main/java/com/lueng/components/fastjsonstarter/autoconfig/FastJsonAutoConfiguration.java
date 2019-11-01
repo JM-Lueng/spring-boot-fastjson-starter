@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * fastjson配置
  * @author JMLiang
- * @since 2018-03-11
+ * @since 2018-04-15
  */
 @Configuration
 @ConditionalOnClass(JSON.class)
