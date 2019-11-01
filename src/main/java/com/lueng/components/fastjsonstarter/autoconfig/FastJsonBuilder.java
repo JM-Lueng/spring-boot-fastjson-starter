@@ -3,7 +3,6 @@ package com.lueng.components.fastjsonstarter.autoconfig;
 import com.alibaba.fastjson.serializer.SerializeConfig;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.serializer.ToStringSerializer;
-import com.alibaba.fastjson.serializer.ValueFilter;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.util.IOUtils;
 import org.springframework.http.MediaType;
@@ -42,17 +41,7 @@ public final class FastJsonBuilder {
                 SerializerFeature.WriteMapNullValue, SerializerFeature.WriteDateUseDateFormat);
         fastJsonConfig.setCharset(IOUtils.UTF8);
         fastJsonConfig.setDateFormat("yyyy-MM-dd HH:mm:ss");
-        ValueFilter valueFilter = new ValueFilter() {
-            @Override
-            public Object process(Object obj, String str, Object obj1) {
-                if (null == obj) {
-                    obj1 = "";
-                }
-                return obj1;
-            }
-        };
         fastJsonConfig.setCharset(Charset.forName("utf-8"));
-        fastJsonConfig.setSerializeFilters(valueFilter);
 
         //解决Long转json精度丢失的问题
         SerializeConfig serializeConfig = SerializeConfig.globalInstance;

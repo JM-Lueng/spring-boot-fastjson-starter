@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * fastjson配置
+ * fastjson配置类
  * @author JMLiang
  * @since 2018-04-15
  */
@@ -33,4 +33,5 @@ public class FastJsonAutoConfiguration {
         converter.setSupportedMediaTypes(FastJsonBuilder.supportMediaTypes());
         return new HttpMessageConverters(converter);
     }
+
 }
