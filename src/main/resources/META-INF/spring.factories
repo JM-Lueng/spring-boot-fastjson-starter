@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.lueng.components.fastjsonstarter.autoconfig.FastJsonAutoConfiguration
